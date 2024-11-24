@@ -60,3 +60,16 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0C06307BDD8428DBE99F1DC8007877D }}
+
+      - name: Copy artifact for deployment job
+        run: 
+         mkdir deploy
+         cp -r./.next/standalone/. ./deploy
+         cp -r./public./deploy
+         cp -r./.next/static/../deploy/.next/static
+         
+
+        
+        
+        
+      
